@@ -26,7 +26,6 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
@@ -35,18 +34,18 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-Number of training examples = 34799
-Number of validation examples = 4410
-Number of testing examples = 12630
-Number of label set examples = 34799
-Image data shape = (32, 32, 3)
-Number of classes = 43
+Number of training examples = 34799;
+Number of validation examples = 4410;
+Number of testing examples = 12630;
+Number of label set examples = 34799;
+Image data shape = (32, 32, 3);
+Number of classes = 43;
 
 ####2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distribute.
 
-![stack Overflow](CarND-Term1-P2/class_distribution.PNG)
+![stack Overflow](https://github.com/evaliu1/CarND-Term1-P2/blob/master/class_distribution.PNG)
 
 ###Design and Test a Model Architecture
 
