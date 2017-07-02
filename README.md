@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 ---
 
 
-## 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+## 1. Provide a basic summary of the data set. 
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
@@ -46,7 +46,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 # Design and Test a Model Architecture
 
-## 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+## 1. Preprocessed the image data. What techniques were chosen and why did you choose these techniques?
 
 As a first step, I decided to convert the images to grayscale because this will change the image from 3 RGB layers to 1 layer.
 Here is an example of a traffic sign image before and after grayscaling.
@@ -67,25 +67,29 @@ Here is an example of an original image and an augmented image:
 The difference between the original data set and the augmented data set is the following ... 
 
 
-##2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+## 2. Final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) 
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 32x32x1 RGB image   							| 
+| Convolution 3x3     	| 5x5 stride, same padding, outputs 28x28x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
+| Convolution 3x3	    | 5x5 stride, same padding, outputs 10x10x16			|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
+| Fully connected		| outputs:120       									|
+| Fully connected		| outputs:84       									|
+| Fully connected		| outputs:10       									|
 | Softmax				| etc.        									|
 |						|												|
 |						|												|
  
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+## 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an ....
 
