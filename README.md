@@ -56,7 +56,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-![alt text][class_distribution.PNG]
+[class_distribution]
 
 ###Design and Test a Model Architecture
 
