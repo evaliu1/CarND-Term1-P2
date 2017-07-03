@@ -157,14 +157,44 @@ The code for making predictions on my final model is located in the 11th cell of
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+The softmax probabilitise for the 1 th sign are
 
+The first guess is sign number: 33 , with a probability of: 0.999986
+The second guess is sign number: 11 , with a probability of: 7.2003e-06
+The third guess is sign number: 25 , with a probability of: 3.18806e-06
+The fourth guess is sign number: 21 , with a probability of: 2.60653e-06
+The fifth guess is sign number: 12 , with a probability of: 9.4626e-07
+-----------------------------------------------
 
-For the second image ... 
+The softmax probabilitise for the 2 th sign are
+The first guess is sign number: 9 , with a probability of: 0.999958
+The second guess is sign number: 41 , with a probability of: 3.95769e-05
+The third guess is sign number: 12 , with a probability of: 1.36729e-06
+The fourth guess is sign number: 10 , with a probability of: 8.49452e-07
+The fifth guess is sign number: 13 , with a probability of: 1.45176e-07
+-----------------------------------------------
+
+The softmax probabilitise for the 3 th sign are
+The first guess is sign number: 15 , with a probability of: 0.998548
+The second guess is sign number: 12 , with a probability of: 0.00127293
+The third guess is sign number: 8 , with a probability of: 0.000139539
+The fourth guess is sign number: 9 , with a probability of: 3.26851e-05
+The fifth guess is sign number: 13 , with a probability of: 5.85101e-06
+-----------------------------------------------
+
+The softmax probabilitise for the 4 th sign are
+The first guess is sign number: 39 , with a probability of: 0.99997
+The second guess is sign number: 31 , with a probability of: 2.87708e-05
+The third guess is sign number: 19 , with a probability of: 8.52219e-07
+The fourth guess is sign number: 21 , with a probability of: 2.85445e-07
+The fifth guess is sign number: 4 , with a probability of: 2.19135e-08
+-----------------------------------------------
+
+The softmax probabilitise for the 5 th sign are
+The first guess is sign number: 1 , with a probability of: 0.999977
+The second guess is sign number: 0 , with a probability of: 2.35195e-05
+The third guess is sign number: 2 , with a probability of: 4.00764e-08
+The fourth guess is sign number: 38 , with a probability of: 1.40795e-12
+The fifth guess is sign number: 14 , with a probability of: 1.31987e-13
+-----------------------------------------------
 
