@@ -32,7 +32,6 @@ signs data set:
 * Number of training examples = 34799;
 * Number of validation examples = 4410;
 * Number of testing examples = 12630;
-* Number of label set examples = 34799;
 * Image data shape = (32, 32, 3);
 * Number of classes = 43;
 
@@ -42,6 +41,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ![stack Overflow](https://github.com/evaliu1/CarND-Term1-P2/blob/master/distribution.PNG)
 
+From this histogram, we can see different classes have different data distribution. So when we training the data, so of the signs will get a better result.
 
 
 # Design and Test a Model Architecture
@@ -56,7 +56,6 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 As a last step, I normalized the image data so it will give me the mean value 0 for distribution.
 
-I decided to generate additional data because ... 
 
 
 ## 2. Final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) 
@@ -100,11 +99,15 @@ My final model results were:
 
 If a well known architecture was chosen:
 * What architecture was chosen?
- I used LeNet Architecture for the training section.
+
+I used LeNet Architecture for the training section.
+
 * Why did you believe it would be relevant to the traffic sign application?
+
 Since LeNet is an image process architecture, it implements the pipelining of all the image process layers, including: Image convolution, RULE, image Pooling, image Flatten.
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+
 I got 0.949 accuracy for the validation set, so the model works pretty well.
  
 
@@ -115,7 +118,8 @@ I got 0.949 accuracy for the validation set, so the model works pretty well.
 Here are five German traffic signs that I found on the web:
 
 ![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/test_Image/test.JPG)
-I changed the colored image to gray, and also normalized the images to fit the training set.
+
+Firstly, I created an 4D array to store my images. Then I changed the colored image to gray, and also normalized the images to fit the training set.
 
 ## 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set 
 
@@ -126,20 +130,17 @@ Test Set Accuracy = 1.000
 |:---------------------:|:---------------------------------------------:| 
 | Turn Right ahead     		| Turn Right ahead 									| 
 | No Pass    			| No Pass										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| No Vehicles   | No Vehicles							|
+| Keep Left    		| Keep Left			 				|
+| Speed Limit(30)		| Speed Limit(30)     				|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. It looks a pretty good result.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+## 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. 
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+For the first image, the model is pretty sure that this is a "Turn Right Ahead" which is number 33 (probability of 0.999986), and the image does contain the sign of turn right ahead. The top five soft max probabilities were
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-### The softmax probabilitise for the 1 th sign are
 
 * The first guess is sign number: 33 , with a probability of: 0.999986
 * The second guess is sign number: 11 , with a probability of: 7.2003e-06
@@ -147,8 +148,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 * The fourth guess is sign number: 21 , with a probability of: 2.60653e-06
 * The fifth guess is sign number: 12 , with a probability of: 9.4626e-07
 
+For the second image, the model is pretty sure that this is a "No Passing" which is number 9 (probability of 0.999958). The top five soft max probabilities were
 
-### The softmax probabilitise for the 2 th sign are
 * The first guess is sign number: 9 , with a probability of: 0.999958
 * The second guess is sign number: 41 , with a probability of: 3.95769e-05
 * The third guess is sign number: 12 , with a probability of: 1.36729e-06
@@ -156,7 +157,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 * The fifth guess is sign number: 13 , with a probability of: 1.45176e-07
 -----------------------------------------------
 
-### The softmax probabilitise for the 3 th sign are
+For the third image, the model is pretty sure that this is a "No Vehicles" which is number 15 (probability of 0.998548). The top five soft max probabilities were
+
 * The first guess is sign number: 15 , with a probability of: 0.998548
 * The second guess is sign number: 12 , with a probability of: 0.00127293
 * The third guess is sign number: 8 , with a probability of: 0.000139539
@@ -164,7 +166,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 * The fifth guess is sign number: 13 , with a probability of: 5.85101e-06
 -----------------------------------------------
 
-### The softmax probabilitise for the 4 th sign are
+For the fourth image, the model is pretty sure that this is a "Keep Left" sign which is number 39 (probability of 0.99997). The top five soft max probabilities were
+
 * The first guess is sign number: 39 , with a probability of: 0.99997
 * The second guess is sign number: 31 , with a probability of: 2.87708e-05
 * The third guess is sign number: 19 , with a probability of: 8.52219e-07
@@ -172,7 +175,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 * The fifth guess is sign number: 4 , with a probability of: 2.19135e-08
 -----------------------------------------------
 
-### The softmax probabilitise for the 5 th sign are
+For the fifth image, the model is pretty sure that this is a "Speed Limit(30)" sign which is number 1 (probability of 0.999977). The top five soft max probabilities were
+
 * The first guess is sign number: 1 , with a probability of: 0.999977
 * The second guess is sign number: 0 , with a probability of: 2.35195e-05
 * The third guess is sign number: 2 , with a probability of: 4.00764e-08
