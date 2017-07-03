@@ -119,7 +119,9 @@ Here are five German traffic signs that I found on the web:
 
 ![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/test_Image/test.JPG)
 
-Firstly, I created an 4D array to store my images. Then I changed the colored image to gray, and also normalized the images to fit the training set.
+Firstly, I resized all the images to (32*32*3), which is the same size for the training set. Second, I created an 4D array to store my images. Third I changed the colored image to gray, and also normalized the images to fit the training set.
+
+For the "Speed Limit(30)" sign, the Network might recognize it for a different speed limit. And for the "No Passing" sign, it looks pretty similiar to "End of No Passing" sign. 
 
 ## 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set 
 
