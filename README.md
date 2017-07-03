@@ -46,7 +46,7 @@ From this histogram, we can see different classes have different data distributi
 
 # Design and Test a Model Architecture
 
-## 1. Preprocessed the image data. What techniques were chosen and why did you choose these techniques?
+## 1. Preprocessed the image data
 
 As a first step, I decided to convert the images to grayscale because this will change the image from 3 RGB layers to 1 layer.
 Here is an example of a traffic sign image before and after grayscaling.
@@ -81,7 +81,7 @@ My final model consisted of the following layers:
 | Fully connected		| outputs:43      									|
 
 
-## 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+## 3. Describe how you trained your model
 
 To train the model, I used an ....
 * AdamOptimizer for managing learning rate
@@ -91,7 +91,7 @@ To train the model, I used an ....
 * Variables initialized with normal distribution (mean=0, std dev=0.1)
 * Biases initialized with zeros
 
-## 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. 
+## 4. Describe the approach taken for finding a solution 
  
 My final model results were: 
 * Train Set Accuracy = 0.996
@@ -113,7 +113,7 @@ I got 0.949 accuracy for the validation set, so the model works pretty well.
 
 # Test a Model on New Images
 
-## 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+## 1. Choose five German traffic signs found on the web and provide them in the report. 
 
 Here are five German traffic signs that I found on the web:
 
@@ -123,8 +123,7 @@ Firstly, I resized all the images to (32*32*3), which is the same size for the t
 
 For the "Speed Limit(30)" sign, the Network might recognize it for a different speed limit. And for the "No Passing" sign, it looks pretty similiar to "End of No Passing" sign. 
 
-## 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set 
-
+## 2. Discuss the model's predictions on these new traffic signs
 Here are the results of the prediction:
 Test Set Accuracy = 1.000
 
@@ -139,7 +138,7 @@ Test Set Accuracy = 1.000
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. It looks a pretty good result.
 
-## 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. 
+## 3. Describe how certain the model is when predicting on each of the five new images 
 
 For the first image, the model is pretty sure that this is a "Turn Right Ahead" which is number 33 (probability of 0.999986), and the image does contain the sign of turn right ahead. The top five soft max probabilities were
 
