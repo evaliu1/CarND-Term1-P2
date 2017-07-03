@@ -58,14 +58,6 @@ As a last step, I normalized the image data so it will give me the mean value 0 
 
 I decided to generate additional data because ... 
 
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
-
 
 ## 2. Final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) 
 
@@ -99,26 +91,21 @@ To train the model, I used an ....
 * Variables initialized with normal distribution (mean=0, std dev=0.1)
 * Biases initialized with zeros
 
-## 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
-
+## 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. 
+ 
 My final model results were: 
 * Train Set Accuracy = 0.996
 * Validation Accuracy = 0.949
 * Test Set Accuracy = 0.931
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
 If a well known architecture was chosen:
 * What architecture was chosen?
- LeNet Architecture.
+ I used LeNet Architecture for the training section.
 * Why did you believe it would be relevant to the traffic sign application?
+Since LeNet is an image process architecture, it implements the pipelining of all the image process layers, including: Image convolution, RULE, image Pooling, image Flatten.
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+I got 0.949 accuracy for the validation set, so the model works pretty well.
  
 
 # Test a Model on New Images
@@ -127,15 +114,10 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/p0.jpg)
-![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/p1.jpg) 
-![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/p3.jpg)
-![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/p4.jpg)
-![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/p5.jpg)
+![alt text](https://github.com/evaliu1/CarND-Term1-P2/blob/master/test_Image/test.JPG)
+I changed the colored image to gray, and also normalized the images to fit the training set.
 
-The first image might be difficult to classify because ...
-
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+## 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set 
 
 Here are the results of the prediction:
 Test Set Accuracy = 1.000
