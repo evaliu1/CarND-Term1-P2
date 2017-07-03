@@ -71,13 +71,14 @@ My final model consisted of the following layers:
 | Convolution 3x3	    | 5x5 stride, same padding, outputs 10x10x16			|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
+|	Flatten					|					output:400							|
 | Fully connected		| outputs:120       									|
+|	RELU					|												|
+|	Dropout					|												|
 | Fully connected		| outputs:84       									|
-| Fully connected		| outputs:10       									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+|	RELU					|												|
+|	Dropout					|												|
+| Fully connected		| outputs:43      									|
 
 
 ## 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
@@ -97,16 +98,15 @@ My final model results were:
 * Validation Accuracy = 0.949
 * Test Set Accuracy = 0.931
 
-If a well known architecture was chosen:
-* What architecture was chosen?
+1. I used softmax to calculate the cross entropy
 
-I used LeNet Architecture for the training section.
+2. Then I averaged the values of cross entropy
 
-* Why did you believe it would be relevant to the traffic sign application?
+3. After that, I minimized the loss function using "AdamOptimizer", we can also use "Gradien Decent" here
 
-Since LeNet is an image process architecture, it implements the pipelining of all the image process layers, including: Image convolution, RULE, image Pooling, image Flatten.
+4. I implemented back propergation to minimize the error
 
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+5. Then I loop the whole process for Epochs times to maximize my validation accuracy
 
 I got 0.949 accuracy for the validation set, so the model works pretty well.
  
